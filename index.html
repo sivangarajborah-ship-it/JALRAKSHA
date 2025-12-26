@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JalRaksha – Smart Flood Alert</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🌊 JalRaksha</h1>
+  <p>AI-inspired Flood Alert & Safety System</p>
+</header>
+
+<section class="card">
+  <h2>📍 Enter Location</h2>
+  <input type="text" id="location" placeholder="e.g. Jorhat, Assam">
+  <button onclick="checkFlood()">Analyze Flood Risk</button>
+</section>
+
+<section id="result" class="card hidden">
+  <h2 id="riskTitle"></h2>
+  <div class="meter">
+    <div id="meterFill"></div>
+  </div>
+  <p id="riskMsg"></p>
+</section>
+
+<section id="details" class="card hidden">
+  <h3>📊 Risk Analysis</h3>
+  <ul id="analysis"></ul>
+</section>
+
+<section id="tips" class="card hidden">
+  <h3>🛟 Safety Instructions</h3>
+  <ul>
+    <li>Move to higher ground immediately</li>
+    <li>Avoid flooded roads and bridges</li>
+    <li>Keep emergency kit ready</li>
+    <li>Follow official disaster alerts</li>
+  </ul>
+</section>
+
+<section id="explain" class="card hidden">
+  <h3>🤔 Why this result?</h3>
+  <ul id="reasonList"></ul>
+  <p class="confidence"><b>Confidence Level:</b> Medium (Prototype)</p>
+  <p class="disclaimer">⚠️ Prototype using limited live data</p>
+</section>
+
+<button class="emergency" onclick="emergencyMode()">🚨 Emergency Mode</button>
+
+<section id="emergencyContacts" class="card hidden">
+  <h3>📞 Emergency Helpline Numbers</h3>
+  <ul class="contacts">
+    <li>🚓 Police: <a href="tel:112">112</a></li>
+    <li>🚑 Ambulance: <a href="tel:108">108</a></li>
+    <li>🚒 Fire: <a href="tel:101">101</a></li>
+    <li>🆘 Disaster: <a href="tel:1077">1077</a></li>
+  </ul>
+</section>
+
+<section class="card">
+  <button class="sos-btn" onclick="getGPSLocation(); sendSOS();">🚨 SOS</button>
+</section>
+
+<div class="gps-box">
+  <p id="gpsStatus">📍 Location not fetched yet</p>
+  <textarea id="gpsMessage" rows="4" readonly></textarea>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

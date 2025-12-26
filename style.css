@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f7fb;
+  color: #333;
+}
+
+header {
+  background: #0a5bd8;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+input, button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+button {
+  background: #1e7f43;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden { display: none; }
+
+.meter {
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#meterFill {
+  height: 100%;
+  width: 0%;
+  background: green;
+}
+
+.sos-btn {
+  background: #dc2626;
+  font-size: 18px;
+  font-weight: bold;
+}
